@@ -1,0 +1,15 @@
+.vs/
+Mgm.Application/bin
+Mgm.Application/obj
+Mgm.Core/bin
+Mgm.Core/obj
+Mgm.EntityFramework/bin
+Mgm.EntityFramework/obj
+Mgm.Utility/bin
+Mgm.Utility/obj
+Mgm.Web/bin
+Mgm.Web/obj
+Mgm.Web/Logs
+Mgm.Web/Out
+Mgm.WebApi/bin
+Mgm.WebApi/obj

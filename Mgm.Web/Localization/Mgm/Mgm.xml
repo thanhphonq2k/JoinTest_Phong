@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="en">
+  <texts>
+    <text name="InvalidPasswordFormat" value="Passwords must be at least 8 characters, contain a lowercase, uppercase, and number." />
+    <text name="UserExisted" value="User existed!" />
+    <text name="UserOrEmailExisted" value="Username or email existed!" />
+    <text name="TheEmailInputAlreadyExist" value="The email already existed!" />
+    
+    <text name="UserNotPound" value="User not pound!" />
+    <text name="TwoPasswordsThatYouEnterIsInconsistent" value="Two passwords that you enter is inconsistent!" />
+    
+    <text name="TheUsernameOrPasswordInvalid" value="The username or password invalid!" />
+    <text name="TheTokenInvalid" value="The token invalid!" />
+    <text name="YourAccountHasBeenTemporarilyLocked" value="Your account has been temporarily locked!" />
+    
+    <text name="TheSalesOrderInputInvalid" value="The sales order input invalid!" />
+    
+    <text name="NoDataFoundForTheSelectedTimePeriod" value="No data found for the selected time period!" />
+    
+    <text name="UserGroupNotFound" value="User group not found!" />
+    <text name="UserGroupExisted" value="User group existed!" />
+    <text name="UserGroupNotFoundOrBeingUsed" value="User group not found or being used!" />
+
+  </texts>
+</localizationDictionary>
