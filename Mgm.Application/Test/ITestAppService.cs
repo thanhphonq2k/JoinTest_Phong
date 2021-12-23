@@ -15,5 +15,7 @@ namespace Mgm.Test
         List<ProductCategory> GetCategorySql();
         int CreateSql(CreateProductCategory input);
         void CreateProductCategory(CreateProductCategory input);
+
+        int InsertorUpdateSql(CreateProductCategory createProductCategory);
     }
 }

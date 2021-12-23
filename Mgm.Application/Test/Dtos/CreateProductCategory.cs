@@ -15,5 +15,6 @@ namespace Mgm.Test.Dtos
         public string Name { get; set; }
         [Required]
         public bool Active { get; set; }
+        public DateTime UpdateAt { get; set; }
     }
 }

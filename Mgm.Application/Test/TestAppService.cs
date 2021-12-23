@@ -253,6 +253,11 @@ namespace Mgm.Test
         {
             try
             {
+                //ProductCategory cate = new ProductCategory
+                //{
+                //    Name = input.Name,
+                //    Active = input.Active
+                //};
                 ProductCategory cate = new ProductCategory();
                 cate.Name = input.Name;
                 cate.Active = input.Active;
@@ -324,6 +329,33 @@ namespace Mgm.Test
                 productCategoryDto.Name = cate.Name;
                 productCategoryDto.Active = cate.Active;
                 return productCategoryDto;
+            }
+            catch (Exception e)
+            {
+                throw new UserFriendlyException(e.Message);
+            }
+        }
+
+        //#39 insert or update
+        public int InsertorUpdateSql(CreateProductCategory createProductCategory)
+        {
+            try
+            {
+                ProductCategory cate = new ProductCategory
+                {
+                    Name = createProductCategory.Name
+                };
+
+                //var sql = "if exists(select * from ProductCategory where Name = @Name) " +
+                //    "update ProductCategory set UpdateAt = GETDATE() where Name = @Name " +
+                //    "else insert into ProductCategory(Name) values(@Name) ";
+
+                var sql2 = "update ProductCategory set UpdateAt = GETDATE() where Name = @Name IF @@ROWCOUNT = 0 " +
+                    "insert into ProductCategory(Name) values(@Name) ";
+
+                var name = new SqlParameter("@Name", cate.Name);
+                var insert = _mgmSysDbContext.GetDbContext().Database.ExecuteSqlCommand(sql2, name);
+                return insert;
             }
             catch (Exception e)
             {
